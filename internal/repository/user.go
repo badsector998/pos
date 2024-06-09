@@ -13,5 +13,5 @@ type User interface {
 	DeleteUser(ctx context.Context, user domain.User) error
 	ReadUserByID(ctx context.Context, id uuid.NullUUID) (domain.User, error)
 	ReadUserByEmail(ctx context.Context, email string) (domain.User, error)
-	ReadUserByFilter(ctx context.Context)
+	ReadUserByFilter(ctx context.Context) ([]domain.User, error)
 }

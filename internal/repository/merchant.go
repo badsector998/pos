@@ -12,5 +12,5 @@ type Merchant interface {
 	UpdateMerchant(ctx context.Context, merchant domain.Merchant) error
 	DeleteMerchant(ctx context.Context, merchant domain.Merchant) error
 	ReadMerchantByID(ctx context.Context, id uuid.NullUUID) (domain.Merchant, error)
-	ReadMerchantByFilter(ctx context.Context)
+	ReadMerchantByFilter(ctx context.Context) ([]domain.Merchant, error)
 }
